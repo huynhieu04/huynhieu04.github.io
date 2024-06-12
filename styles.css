@@ -1,0 +1,236 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    z-index: 1000; /* tieu de nam tren cac ptu khac */
+    border-bottom: 1px solid white; /*them duong vien */
+    max-width: auto; 
+    margin: 0 auto;
+}
+
+.menu, .mail {
+    font-size: 24px;
+    cursor: pointer;
+}
+.mail {
+    margin: 30px; 
+
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px; 
+    flex-grow: 1;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 70px 10px 10px; /* padding ko trufng tiêu đề */
+    margin-top: 70px;
+}
+
+.column {
+    flex: 1 1 25%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    text-align: center;
+    padding: 10px;
+}
+
+.pagination {
+    width: auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: White;
+    color: black;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.tags-card {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.tag-black {
+    background-color: black;
+    color: white;
+}
+
+.tag-light-grey {
+    background-color: lightgrey;
+    color: black;
+}
+/* 2 cái media là lm theo responsive với giao diện mobile */
+@media (max-width: 768px) {
+    .column {
+        /* max-width: 50%; */
+        flex: 1 1 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .column {
+        /* max-width: 100%; */
+        flex: 1 1 100%;
+    }
+}
+
+.footer h3 {
+    margin-top: 0;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+li.dropdown{
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px;
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px; 
+    text-decoration: none; 
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover{
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.about{
+    width: auto;
+    text-align: center;
+    padding: 20px 0;
+}
+.about a{
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+.footer{
+   margin:0px auto;
+   text-align: left;
+}
+.footer-column{
+    margin-right: 10px
+
+}
+.footer-column img{
+    width: 50px;
+    height: auto;
+    padding-right: 50px; 
+    background-size: 30px 30px;
+}
+.footer-column a.active {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.footer-column  a:hover:not(.active){
+    display: block;
+}
+.blog-post span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.blog-post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Khoảng cách giữa các bài viết */
+}
+
+.blog-post img {
+    width: 50px; /* Kích thước ảnh */
+    height: 50px;
+    margin-right: 10px; /* Khoảng cách giữa ảnh và văn bản */
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-content h4 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.post-content p {
+    margin: 0;
+    font-size: 0.9em;
+    color: black; /* Màu sắc của phần văn bản */
+}
